@@ -12,7 +12,8 @@ class bezier:
         """
         Args:
             points: np.array, shape=[n, 2], points是曲线经过的点
-                （self.P是贝塞尔曲线中的顶点，顶点数要不小于阶数）
+                （self.P是贝塞尔曲线中的顶点，顶点数为阶数+1，
+                  self.points是曲线上的点，其个数要不小于顶点数）
             n: 阶数, 这里为2或3(这里我只支持二阶和三阶，其实也可以扩展为更一般化，添加不同的T即可)
         """
         assert len(points) >= n+1
